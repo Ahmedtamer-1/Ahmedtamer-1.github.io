@@ -1,545 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ahmed Tamer – Web Developer & UI/UX Designer portfolio showcasing projects, skills, and certifications." />
-  <title>Ahmed Tamer | Web Developer &amp; UI/UX Designer</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Ahmed Tamer – Software Engineer & Startup Co-Founder. AASTMT Class of 2027."/>
+  <title>Ahmed Tamer | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
 
-  <!-- ========== NAVIGATION ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">AT<span class="dot">.</span></a>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">AT<span>.</span></a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="nav-burger" id="nav-burger" aria-label="menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- ========== HERO ========== -->
+  <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-bg-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-    </div>
-    <div class="hero-content">
-      <p class="hero-greeting">Hello, I'm</p>
-      <h1 class="hero-name">Ahmed Tamer</h1>
-      <h2 class="hero-title">
-        <span class="typed-text" id="typed-text"></span><span class="cursor">|</span>
-      </h2>
-      <p class="hero-bio">
-        I build beautiful, functional websites and craft user experiences that
-        people love — blending clean code with thoughtful design.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content reveal-hero">
+      <p class="hero-tag">Software Engineer &amp; Co-Founder</p>
+      <h1 class="hero-name">Ahmed<br>Tamer</h1>
+      <p class="hero-sub">AASTMT · Class of 2027 · GPA 3.4/4.0<br>Building systems that run businesses.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-glass">View Work</a>
         <a href="#contact" class="btn btn-outline">Get In Touch</a>
       </div>
-      <div class="hero-social">
-        <a href="https://github.com/Ahmedtamer-1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/ahmedtamer" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://twitter.com/ahmedtamer" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-        <a href="mailto:ahmedtamer@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <div class="hero-socials">
+        <a href="https://github.com/Ahmedtamer-1" target="_blank" rel="noopener">GH</a>
+        <a href="https://linkedin.com/in/ahmedtamer" target="_blank" rel="noopener">LI</a>
+        <a href="mailto:ahmed.omar.aser@gmail.com">ML</a>
       </div>
     </div>
-    <div class="hero-scroll-hint">
-      <a href="#about" aria-label="Scroll down"><i class="fas fa-chevron-down"></i></a>
-    </div>
+    <div class="hero-scroll"><span></span></div>
   </section>
 
-  <!-- ========== ABOUT ========== -->
-  <section class="section about" id="about">
+  <!-- ABOUT -->
+  <section class="section" id="about">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">About Me</span>
-        <h2 class="section-title">Who I Am</h2>
-      </div>
+      <div class="section-label reveal">About</div>
       <div class="about-grid">
-        <div class="about-image-wrap">
-          <div class="about-image-placeholder" aria-label="Profile photo">
-            <i class="fas fa-user"></i>
-          </div>
-          <div class="about-badge">
-            <span class="badge-num">2+</span>
-            <span class="badge-label">Years of Experience</span>
-          </div>
+        <div class="about-text reveal">
+          <h2>I don't just write code.<br>I build systems that<br><em>run businesses.</em></h2>
+          <p>Software Engineering student at <strong>AASTMT</strong>, Smart Village — Giza, Egypt. I co-founded <a href="https://lumeegy.com" target="_blank" rel="noopener">Lume Egy</a>, a live e-commerce fashion brand where I own the entire technical stack: storefront development, paid-media pixel infrastructure, and fulfillment pipelines.</p>
+          <p>Beyond commerce, I architect multiplayer game systems, build cross-platform mobile apps, and explore systems programming — because good engineers don't stop at one layer.</p>
         </div>
-        <div class="about-text">
-          <h3>Web Developer &amp; UI/UX Designer</h3>
-          <p>
-            I'm a passionate web developer and UI/UX designer dedicated to creating
-            engaging digital experiences. I love translating complex problems into
-            simple, elegant solutions — whether that's a slick React app, a pixel-perfect
-            Figma prototype, or a fast, accessible website.
-          </p>
-          <p>
-            My work sits at the crossroads of technology and design. I write clean,
-            maintainable code and obsess over the tiny details that make an interface
-            feel polished and intuitive.
-          </p>
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-num">15+</span>
-              <span class="stat-label">Projects Completed</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">10+</span>
-              <span class="stat-label">Happy Clients</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">5+</span>
-              <span class="stat-label">Certifications</span>
-            </div>
+        <div class="about-stats reveal">
+          <div class="stat-card glass">
+            <span class="stat-n">EGP 49K+</span>
+            <span class="stat-l">Gross Sales — Lume Egy</span>
           </div>
-          <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+          <div class="stat-card glass">
+            <span class="stat-n">2.4%</span>
+            <span class="stat-l">Peak Conversion Rate</span>
+          </div>
+          <div class="stat-card glass">
+            <span class="stat-n">17+</span>
+            <span class="stat-l">GitHub Repositories</span>
+          </div>
+          <div class="stat-card glass">
+            <span class="stat-n">3.4</span>
+            <span class="stat-l">GPA / 4.0</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SKILLS ========== -->
-  <section class="section skills" id="skills">
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">What I Do</span>
-        <h2 class="section-title">Skills &amp; Technologies</h2>
-      </div>
+      <div class="section-label reveal">Experience</div>
+      <div class="timeline">
 
-      <div class="skills-categories">
-
-        <!-- Frontend -->
-        <div class="skill-category reveal">
-          <div class="skill-category-header">
-            <i class="fas fa-code"></i>
-            <h3>Frontend Development</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">JavaScript (ES6+)</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">Tailwind CSS</span>
-            <span class="skill-tag">Sass/SCSS</span>
+        <div class="timeline-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <div class="tl-header">
+              <div>
+                <h3>Co-Founder &amp; Technical Lead</h3>
+                <span class="tl-company">Lume Egy</span>
+              </div>
+              <span class="tl-date">Oct 2025 – Present</span>
+            </div>
+            <ul>
+              <li>Spearheaded technical launch of a live fashion e-commerce brand — EGP 49,056 gross sales, 93 orders across all channels.</li>
+              <li>Drove 2.4% peak conversion rate at launch; leading full platform migration from Shopify to WordPress / WooCommerce.</li>
+              <li>Integrated Meta Ads, pixel infrastructure, and fulfillment workflows end-to-end.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>WordPress</span><span>WooCommerce</span><span>Shopify</span><span>Meta Ads</span><span>Liquid</span>
+            </div>
           </div>
         </div>
 
-        <!-- Backend -->
-        <div class="skill-category reveal">
-          <div class="skill-category-header">
-            <i class="fas fa-server"></i>
-            <h3>Backend &amp; Databases</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Express.js</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Firebase</span>
-          </div>
-        </div>
-
-        <!-- UI/UX Design -->
-        <div class="skill-category reveal">
-          <div class="skill-category-header">
-            <i class="fas fa-pen-nib"></i>
-            <h3>UI/UX &amp; Design</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Figma</span>
-            <span class="skill-tag">Adobe XD</span>
-            <span class="skill-tag">User Research</span>
-            <span class="skill-tag">Wireframing</span>
-            <span class="skill-tag">Prototyping</span>
-            <span class="skill-tag">Design Systems</span>
-            <span class="skill-tag">Responsive Design</span>
-            <span class="skill-tag">Accessibility (WCAG)</span>
-          </div>
-        </div>
-
-        <!-- Tools & DevOps -->
-        <div class="skill-category reveal">
-          <div class="skill-category-header">
-            <i class="fas fa-tools"></i>
-            <h3>Tools &amp; DevOps</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Git &amp; GitHub</span>
-            <span class="skill-tag">VS Code</span>
-            <span class="skill-tag">npm / yarn</span>
-            <span class="skill-tag">Webpack / Vite</span>
-            <span class="skill-tag">Docker (basics)</span>
-            <span class="skill-tag">Vercel / Netlify</span>
-            <span class="skill-tag">Linux CLI</span>
+        <div class="timeline-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <div class="tl-header">
+              <div>
+                <h3>Technical Partner (20% Equity)</h3>
+                <span class="tl-company">Adorna</span>
+              </div>
+              <span class="tl-date">Feb 2025 – Present</span>
+            </div>
+            <ul>
+              <li>Leading all pre-launch technical planning and infrastructure — storefront on WordPress / WooCommerce.</li>
+              <li>Architecting full Meta &amp; TikTok pixel infrastructure for data-driven ad spend from day one.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>WordPress</span><span>WooCommerce</span><span>Meta Pixel</span><span>TikTok Pixel</span>
+            </div>
           </div>
         </div>
 
       </div>
-
-      <!-- Proficiency bars -->
-      <div class="proficiency-bars reveal">
-        <h3 class="proficiency-title">Core Proficiencies</h3>
-        <div class="bar-list">
-          <div class="bar-item">
-            <div class="bar-label"><span>HTML &amp; CSS</span><span>95%</span></div>
-            <div class="bar-track"><div class="bar-fill" data-width="95"></div></div>
-          </div>
-          <div class="bar-item">
-            <div class="bar-label"><span>JavaScript / TypeScript</span><span>88%</span></div>
-            <div class="bar-track"><div class="bar-fill" data-width="88"></div></div>
-          </div>
-          <div class="bar-item">
-            <div class="bar-label"><span>React / Next.js</span><span>85%</span></div>
-            <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
-          </div>
-          <div class="bar-item">
-            <div class="bar-label"><span>UI/UX Design (Figma)</span><span>90%</span></div>
-            <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
-          </div>
-          <div class="bar-item">
-            <div class="bar-label"><span>Node.js / Express</span><span>78%</span></div>
-            <div class="bar-track"><div class="bar-fill" data-width="78"></div></div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- ========== PROJECTS ========== -->
-  <section class="section projects" id="projects">
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">My Work</span>
-        <h2 class="section-title">Featured Projects</h2>
-      </div>
-
-      <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="web">Web Dev</button>
-        <button class="filter-btn" data-filter="uiux">UI/UX</button>
-        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-      </div>
-
+      <div class="section-label reveal">Projects</div>
       <div class="projects-grid">
 
-        <article class="project-card reveal" data-category="fullstack">
-          <div class="project-img-wrap">
-            <div class="project-img-placeholder">
-              <i class="fas fa-shopping-cart"></i>
-            </div>
-            <div class="project-overlay">
-              <a href="#" class="overlay-link" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
-              <a href="#" class="overlay-link" aria-label="View code"><i class="fab fa-github"></i></a>
-            </div>
+        <a href="https://lumeegy.com" target="_blank" rel="noopener" class="project-card glass reveal">
+          <div class="pc-top">
+            <span class="pc-tag">Live · E-Commerce</span>
+            <span class="pc-arrow">↗</span>
           </div>
-          <div class="project-info">
-            <span class="project-tag">Full Stack</span>
-            <h3>E-Commerce Platform</h3>
-            <p>A full-featured online store built with React, Node.js, and MongoDB featuring cart, checkout, and admin dashboard.</p>
-            <div class="project-techs">
-              <span>React</span><span>Node.js</span><span>MongoDB</span><span>Stripe</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="uiux">
-          <div class="project-img-wrap">
-            <div class="project-img-placeholder">
-              <i class="fas fa-mobile-alt"></i>
-            </div>
-            <div class="project-overlay">
-              <a href="#" class="overlay-link" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
-              <a href="#" class="overlay-link" aria-label="View on Figma"><i class="fab fa-figma"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-tag">UI/UX Design</span>
-            <h3>FinTech App Redesign</h3>
-            <p>Complete UX overhaul of a mobile banking app — research, wireframes, hi-fi prototypes, and a full design system.</p>
-            <div class="project-techs">
-              <span>Figma</span><span>User Research</span><span>Prototyping</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="web">
-          <div class="project-img-wrap">
-            <div class="project-img-placeholder">
-              <i class="fas fa-blog"></i>
-            </div>
-            <div class="project-overlay">
-              <a href="#" class="overlay-link" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
-              <a href="#" class="overlay-link" aria-label="View code"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-tag">Web Dev</span>
-            <h3>Developer Blog</h3>
-            <p>A fast, SEO-optimized blog with markdown support and syntax highlighting, built with Next.js and deployed on Vercel.</p>
-            <div class="project-techs">
-              <span>Next.js</span><span>MDX</span><span>Tailwind</span><span>Vercel</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="uiux">
-          <div class="project-img-wrap">
-            <div class="project-img-placeholder">
-              <i class="fas fa-palette"></i>
-            </div>
-            <div class="project-overlay">
-              <a href="#" class="overlay-link" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
-              <a href="#" class="overlay-link" aria-label="View on Figma"><i class="fab fa-figma"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-tag">UI/UX Design</span>
-            <h3>Design System</h3>
-            <p>A scalable component library with typography, colour tokens, and reusable UI patterns documented in Storybook.</p>
-            <div class="project-techs">
-              <span>Figma</span><span>React</span><span>Storybook</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="web">
-          <div class="project-img-wrap">
-            <div class="project-img-placeholder">
-              <i class="fas fa-tasks"></i>
-            </div>
-            <div class="project-overlay">
-              <a href="#" class="overlay-link" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
-              <a href="#" class="overlay-link" aria-label="View code"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-tag">Web Dev</span>
-            <h3>Task Management App</h3>
-            <p>Drag-and-drop Kanban board with real-time updates via Firebase, authentication, and responsive mobile layout.</p>
-            <div class="project-techs">
-              <span>React</span><span>Firebase</span><span>DnD Kit</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="fullstack">
-          <div class="project-img-wrap">
-            <div class="project-img-placeholder">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <div class="project-overlay">
-              <a href="#" class="overlay-link" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
-              <a href="#" class="overlay-link" aria-label="View code"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-tag">Full Stack</span>
-            <h3>Analytics Dashboard</h3>
-            <p>Data visualisation dashboard with interactive charts, CSV export, and role-based access control.</p>
-            <div class="project-techs">
-              <span>React</span><span>D3.js</span><span>Express</span><span>PostgreSQL</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="projects-more">
-        <a href="https://github.com/Ahmedtamer-1" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          <i class="fab fa-github"></i>&nbsp; See More on GitHub
+          <h3>Lume Egy</h3>
+          <p>Full e-commerce fashion brand — Shopify custom theme, AJAX cart/account drawers, Meta pixel infrastructure, fulfillment integrations. EGP 49K+ in gross sales.</p>
+          <div class="pc-techs"><span>WordPress</span><span>WooCommerce</span><span>Shopify</span><span>Liquid</span></div>
         </a>
+
+        <div class="project-card glass reveal">
+          <div class="pc-top">
+            <span class="pc-tag">Pre-Launch · E-Commerce</span>
+          </div>
+          <h3>Adorna</h3>
+          <p>Technical Partner with 20% equity. Building storefront, WooCommerce setup, and full marketing pixel architecture before launch.</p>
+          <div class="pc-techs"><span>WordPress</span><span>WooCommerce</span><span>Meta Pixel</span><span>TikTok Pixel</span></div>
+        </div>
+
+        <div class="project-card glass reveal">
+          <div class="pc-top">
+            <span class="pc-tag">Private · Game Dev</span>
+          </div>
+          <h3>Lmaxy — Multiplayer Game</h3>
+          <p>Full P2P multiplayer game with real-time state sync, enemy AI, and matchmaking via Epic Online Services. Managed full dev lifecycle from prototype to playable build.</p>
+          <div class="pc-techs"><span>C#</span><span>Unity</span><span>Mirror Networking</span><span>EOS</span></div>
+        </div>
+
+        <a href="https://github.com/Ahmedtamer-1/NeoBanking" target="_blank" rel="noopener" class="project-card glass reveal">
+          <div class="pc-top">
+            <span class="pc-tag">Mobile App</span>
+            <span class="pc-arrow">↗</span>
+          </div>
+          <h3>NeoBanking</h3>
+          <p>Full-featured cross-platform banking app with account management, transaction flows, and polished UI — clean architecture, scalable state management.</p>
+          <div class="pc-techs"><span>Flutter</span><span>Dart</span><span>Android</span><span>iOS</span></div>
+        </a>
+
+        <a href="https://github.com/Ahmedtamer-1/BluXT" target="_blank" rel="noopener" class="project-card glass reveal">
+          <div class="pc-top">
+            <span class="pc-tag">Android · Active</span>
+            <span class="pc-arrow">↗</span>
+          </div>
+          <h3>BluXT</h3>
+          <p>Native Android application built in Kotlin — exploring Kotlin-first architecture alongside Flutter work.</p>
+          <div class="pc-techs"><span>Kotlin</span><span>Android</span></div>
+        </a>
+
+        <a href="https://github.com/Ahmedtamer-1/FashionStoreSystem" target="_blank" rel="noopener" class="project-card glass reveal">
+          <div class="pc-top">
+            <span class="pc-tag">Backend System</span>
+            <span class="pc-arrow">↗</span>
+          </div>
+          <h3>FashionStoreSystem</h3>
+          <p>Complete fashion store management system in Java — inventory, product cataloguing, order processing. Built from real Lume Egy experience.</p>
+          <div class="pc-techs"><span>Java</span><span>OOP</span></div>
+        </a>
+
+        <a href="https://github.com/Ahmedtamer-1/techy" target="_blank" rel="noopener" class="project-card glass reveal">
+          <div class="pc-top">
+            <span class="pc-tag">Full-Stack Web</span>
+            <span class="pc-arrow">↗</span>
+          </div>
+          <h3>Techy — Dev Forum</h3>
+          <p>Full-stack developer forum from scratch — user auth, threaded discussions, post management, end-to-end database design.</p>
+          <div class="pc-techs"><span>PHP</span><span>MySQL</span><span>Full-Stack</span></div>
+        </a>
+
+        <a href="https://github.com/Ahmedtamer-1/OS-Tracker" target="_blank" rel="noopener" class="project-card glass reveal">
+          <div class="pc-top">
+            <span class="pc-tag">Systems</span>
+            <span class="pc-arrow">↗</span>
+          </div>
+          <h3>OS-Tracker &amp; TaskManager</h3>
+          <p>Unix process tracking and task management built for an OS course — low-level systems programming in Bash.</p>
+          <div class="pc-techs"><span>Shell</span><span>Unix</span><span>Linux</span></div>
+        </a>
+
       </div>
-
-    </div>
-  </section>
-
-  <!-- ========== CERTIFICATIONS ========== -->
-  <section class="section certifications" id="certifications">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Credentials</span>
-        <h2 class="section-title">Certifications</h2>
-      </div>
-
-      <div class="cert-grid">
-
-        <div class="cert-card reveal">
-          <div class="cert-icon"><i class="fab fa-react"></i></div>
-          <div class="cert-info">
-            <h3>Meta Front-End Developer</h3>
-            <p class="cert-issuer"><i class="fas fa-building"></i> Meta (Coursera)</p>
-            <p class="cert-date"><i class="fas fa-calendar-alt"></i> 2024</p>
-          </div>
-          <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="View certificate">
-            <i class="fas fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
-
-        <div class="cert-card reveal">
-          <div class="cert-icon"><i class="fab fa-google"></i></div>
-          <div class="cert-info">
-            <h3>Google UX Design</h3>
-            <p class="cert-issuer"><i class="fas fa-building"></i> Google (Coursera)</p>
-            <p class="cert-date"><i class="fas fa-calendar-alt"></i> 2023</p>
-          </div>
-          <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="View certificate">
-            <i class="fas fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
-
-        <div class="cert-card reveal">
-          <div class="cert-icon"><i class="fab fa-js"></i></div>
-          <div class="cert-info">
-            <h3>JavaScript Algorithms &amp; Data Structures</h3>
-            <p class="cert-issuer"><i class="fas fa-building"></i> freeCodeCamp</p>
-            <p class="cert-date"><i class="fas fa-calendar-alt"></i> 2023</p>
-          </div>
-          <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="View certificate">
-            <i class="fas fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
-
-        <div class="cert-card reveal">
-          <div class="cert-icon"><i class="fas fa-paint-brush"></i></div>
-          <div class="cert-info">
-            <h3>UI/UX Design Specialization</h3>
-            <p class="cert-issuer"><i class="fas fa-building"></i> California Institute of the Arts</p>
-            <p class="cert-date"><i class="fas fa-calendar-alt"></i> 2023</p>
-          </div>
-          <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="View certificate">
-            <i class="fas fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
-
-        <div class="cert-card reveal">
-          <div class="cert-icon"><i class="fab fa-aws"></i></div>
-          <div class="cert-info">
-            <h3>AWS Cloud Practitioner</h3>
-            <p class="cert-issuer"><i class="fas fa-building"></i> Amazon Web Services</p>
-            <p class="cert-date"><i class="fas fa-calendar-alt"></i> 2024</p>
-          </div>
-          <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="View certificate">
-            <i class="fas fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
-
-        <div class="cert-card reveal">
-          <div class="cert-icon"><i class="fas fa-database"></i></div>
-          <div class="cert-info">
-            <h3>Responsive Web Design</h3>
-            <p class="cert-issuer"><i class="fas fa-building"></i> freeCodeCamp</p>
-            <p class="cert-date"><i class="fas fa-calendar-alt"></i> 2022</p>
-          </div>
-          <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="View certificate">
-            <i class="fas fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
-
+      <div class="projects-more reveal">
+        <a href="https://github.com/Ahmedtamer-1" target="_blank" rel="noopener" class="btn btn-glass">All Repos on GitHub ↗</a>
       </div>
     </div>
   </section>
 
-  <!-- ========== CONTACT ========== -->
-  <section class="section contact" id="contact">
+  <!-- SKILLS -->
+  <section class="section" id="skills">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Say Hello</span>
-        <h2 class="section-title">Get In Touch</h2>
+      <div class="section-label reveal">Skills</div>
+      <div class="skills-grid">
+        <div class="skill-group glass reveal">
+          <h4>Languages</h4>
+          <div class="skill-tags">
+            <span>C</span><span>C++</span><span>C#</span><span>Java</span><span>Kotlin</span>
+            <span>Dart</span><span>JavaScript</span><span>TypeScript</span><span>PHP</span>
+            <span>Python</span><span>Liquid</span><span>SQL</span><span>Shell</span>
+          </div>
+        </div>
+        <div class="skill-group glass reveal">
+          <h4>Frameworks &amp; Platforms</h4>
+          <div class="skill-tags">
+            <span>Flutter</span><span>Unity</span><span>Shopify</span><span>WordPress</span>
+            <span>WooCommerce</span><span>Node.js</span><span>Android</span>
+          </div>
+        </div>
+        <div class="skill-group glass reveal">
+          <h4>Databases &amp; Infra</h4>
+          <div class="skill-tags">
+            <span>MongoDB</span><span>Firebase</span><span>MariaDB</span><span>MySQL</span>
+            <span>Docker</span><span>Git</span><span>Linux CLI</span><span>Hostinger</span>
+          </div>
+        </div>
+        <div class="skill-group glass reveal">
+          <h4>Design &amp; Marketing</h4>
+          <div class="skill-tags">
+            <span>Figma</span><span>Blender</span><span>CLO3D</span><span>Meta Ads</span>
+            <span>TikTok Pixel</span><span>Google Analytics</span><span>Technical SEO</span>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-label reveal">Contact</div>
       <div class="contact-grid">
-        <div class="contact-info reveal">
-          <p class="contact-intro">
-            Have a project in mind, a question, or just want to say hi? My inbox is
-            always open. Drop me a message and I'll get back to you as soon as possible.
-          </p>
-          <div class="contact-details">
-            <a href="mailto:ahmedtamer@example.com" class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>ahmedtamer@example.com</span>
-            </a>
-            <a href="https://linkedin.com/in/ahmedtamer" target="_blank" rel="noopener noreferrer" class="contact-item">
-              <i class="fab fa-linkedin-in"></i>
-              <span>linkedin.com/in/ahmedtamer</span>
-            </a>
-            <a href="https://github.com/Ahmedtamer-1" target="_blank" rel="noopener noreferrer" class="contact-item">
-              <i class="fab fa-github"></i>
-              <span>github.com/Ahmedtamer-1</span>
-            </a>
+        <div class="contact-text reveal">
+          <h2>Let's build<br>something real.</h2>
+          <p>Open to internships, collaborations, freelance projects, or just a good technical conversation.</p>
+          <div class="contact-links">
+            <a href="mailto:ahmed.omar.aser@gmail.com">ahmed.omar.aser@gmail.com</a>
+            <a href="https://linkedin.com/in/ahmedtamer" target="_blank" rel="noopener">linkedin.com/in/ahmedtamer</a>
+            <a href="https://github.com/Ahmedtamer-1" target="_blank" rel="noopener">github.com/Ahmedtamer-1</a>
           </div>
         </div>
-
-        <form class="contact-form reveal" id="contact-form" novalidate>
+        <form class="contact-form glass reveal" id="contact-form" novalidate>
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required />
+              <input type="text" id="name" name="name" placeholder="Your name" required/>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              <input type="email" id="email" name="email" placeholder="your@email.com" required/>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
           </div>
           <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-full">
-            <span>Send Message</span>
-            <i class="fas fa-paper-plane"></i>
-          </button>
-          <p class="form-note" id="form-note" aria-live="polite"></p>
+          <button type="submit" class="btn btn-glass btn-full">Send Message</button>
+          <p class="form-note" id="form-note"></p>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p class="footer-copy">&copy; <span id="year"></span> Ahmed Tamer. All rights reserved.</p>
-      <div class="footer-social">
-        <a href="https://github.com/Ahmedtamer-1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/ahmedtamer" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://twitter.com/ahmedtamer" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      <p>&copy; <span id="year"></span> Ahmed Tamer</p>
+      <div class="footer-links">
+        <a href="https://github.com/Ahmedtamer-1" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/ahmedtamer" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://ahmedtamer-1.github.io">Portfolio</a>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll-to-top button -->
-  <button class="scroll-top" id="scroll-top" aria-label="Back to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
