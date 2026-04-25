@@ -191,11 +191,33 @@ const form = document.getElementById('contact-form');
 const note = document.getElementById('form-note');
 
 if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    note.textContent = 'Message sent — I\'ll get back to you soon.';
-    note.style.color = '#8b949e';
-    form.reset();
-    setTimeout(() => { note.textContent = ''; }, 4000);
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch('https://formspree.io/f/mkokejyg', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      if (res.ok) {
+        note.textContent = 'Message sent — I\'ll get back to you soon.';
+        note.style.color = '#8b949e';
+        form.reset();
+      } else {
+        note.textContent = 'Something went wrong. Email me directly.';
+        note.style.color = '#f85149';
+      }
+    } catch {
+      note.textContent = 'Network error. Try emailing me directly.';
+      note.style.color = '#f85149';
+    }
+
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
+    setTimeout(() => { note.textContent = ''; }, 5000);
   });
 }
